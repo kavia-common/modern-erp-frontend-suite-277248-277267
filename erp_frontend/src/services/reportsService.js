@@ -3,14 +3,13 @@ import api from './api';
 // PUBLIC_INTERFACE
 /**
  * Reports service for generating and managing reports
+ * Backend provides: summary, sales, inventory, and financial reports
  */
 const reportsService = {
-  getAll: (params = {}) => api.get('/api/v1/reports', { params }),
-  getById: (id) => api.get(`/api/v1/reports/${id}`),
-  generate: (data) => api.post('/api/v1/reports/generate', data),
-  export: (id, format) => api.get(`/api/v1/reports/${id}/export?format=${format}`, {
-    responseType: 'blob'
-  })
+  getSummary: () => api.get('/api/v1/reports/summary'),
+  getSalesReport: () => api.get('/api/v1/reports/sales'),
+  getInventoryReport: () => api.get('/api/v1/reports/inventory'),
+  getFinancialReport: () => api.get('/api/v1/reports/financial')
 };
 
 export default reportsService;
