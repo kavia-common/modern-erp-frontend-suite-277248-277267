@@ -1,0 +1,175 @@
+.topbar {
+  height: 64px;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-6);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  box-shadow: var(--shadow-sm);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.topbar-menu-btn {
+  background: none;
+  border: none;
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.topbar-menu-btn:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.topbar-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.topbar-icon-btn {
+  background: none;
+  border: none;
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.topbar-icon-btn:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.topbar-user {
+  position: relative;
+}
+
+.topbar-user-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.topbar-user-btn:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.topbar-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--success));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.topbar-user-info {
+  text-align: left;
+  display: none;
+}
+
+.topbar-user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.topbar-user-role {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.topbar-user-menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-2));
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 200px;
+  z-index: var(--z-dropdown);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.topbar-user-menu-section {
+  padding: var(--spacing-2);
+}
+
+.topbar-user-menu-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  padding: var(--spacing-2) var(--spacing-3);
+  letter-spacing: 0.05em;
+}
+
+.topbar-user-menu-item {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.topbar-user-menu-item:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.topbar-user-menu-item.active {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .topbar-user-info {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 var(--spacing-4);
+  }
+  
+  .topbar-title {
+    font-size: var(--font-size-lg);
+  }
+}

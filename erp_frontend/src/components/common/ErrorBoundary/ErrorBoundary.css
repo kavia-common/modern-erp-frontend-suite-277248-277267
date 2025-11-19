@@ -1,0 +1,60 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-4);
+}
+
+.error-boundary-content {
+  max-width: 600px;
+  text-align: center;
+  background-color: var(--surface);
+  padding: var(--spacing-12);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.error-boundary-content h1 {
+  color: var(--error);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-3xl);
+}
+
+.error-boundary-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-6);
+  font-size: var(--font-size-lg);
+}
+
+.error-boundary-btn {
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.error-boundary-btn:hover {
+  background-color: #2563eb;
+  box-shadow: var(--shadow-md);
+}
+
+.error-boundary-details {
+  margin-top: var(--spacing-6);
+  text-align: left;
+  background-color: var(--bg-tertiary);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+}
+
+.error-boundary-details pre {
+  font-size: var(--font-size-xs);
+  overflow-x: auto;
+  color: var(--text-secondary);
+}

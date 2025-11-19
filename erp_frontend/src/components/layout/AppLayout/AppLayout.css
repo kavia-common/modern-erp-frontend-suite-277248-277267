@@ -1,0 +1,18 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+}
+
+.app-main {
+  flex: 1;
+  margin-top: 64px;
+  transition: margin-left var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    margin-left: 260px;
+  }
+}
